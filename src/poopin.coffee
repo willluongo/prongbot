@@ -19,5 +19,5 @@ module.exports = (robot) ->
 	regex = /I('m| am)? poopin(g)?/i
 
 	robot.hear regex, (msg) ->
-		user = msg.message.user.toLowerCase()
+		user = msg.message.user.name.toLowerCase().split(" ").join()
 		msg.send poopin_place + user + ".png"
