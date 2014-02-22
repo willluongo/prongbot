@@ -12,3 +12,12 @@
 #
 # Author:
 #   willluongo
+
+poopin_place = process.env.HUBOT_POOPIN_PLACE
+
+module.exports = (robot) ->
+	regex = /I('m| am)? poopin(g)?/i
+
+	robot.hear regex, (msg) ->
+		user = msg.message.user.toLowerCase()
+		msg.send poopin_place + user + ".png"
