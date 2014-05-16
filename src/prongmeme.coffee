@@ -30,7 +30,7 @@ merge = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*(dunk on|me).*/i, (msg) ->
+  robot.hear /.*(dunk on|dunk me).*/i, (msg) ->
     msg.send images_url + msg.random dunk
 
   robot.hear /.*(merge me).*/i, (msg) ->
