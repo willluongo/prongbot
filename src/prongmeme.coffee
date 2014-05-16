@@ -21,7 +21,7 @@
 images_url = process.env.HUBOT_PRONGMEME_URL
 images_path = process.env.HUBOT_PRONGMEME_PATH
 
-swag = [
+dunk = [
   "swag.gif"
 ]
 
@@ -30,7 +30,7 @@ merge = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*(swag me).*/i, (msg) ->
+  robot.hear /.*(dunk me|dunk on).*/i, (msg) ->
     msg.send images_url + msg.random swag
 
   robot.hear /.*(merge me).*/i, (msg) ->
