@@ -12,3 +12,5 @@ merge = [
 module.exports = (robot) ->
   robot.hear /.*(swag me).*/i, (msg) ->
     msg.send images_url + msg.random swag
+  robot.hear /.*(merge me).*/i, (msg) ->
+    msg.send images_url + msg.random merge
