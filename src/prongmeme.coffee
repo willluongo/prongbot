@@ -9,7 +9,7 @@
 #   HUBOT_PRONGMEME_PATH
 #
 # Commands:
-#   swag me - puts a swag image in the channel
+#   dunk on @username - puts a swag image in the channel
 #   merge me - puts a merge image in the channel
 #
 # Notes:
@@ -30,8 +30,8 @@ merge = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*(dunk me|dunk on).*/i, (msg) ->
-    msg.send images_url + msg.random swag
+  robot.hear /.*(dunk on|me).*/i, (msg) ->
+    msg.send images_url + msg.random dunk
 
   robot.hear /.*(merge me).*/i, (msg) ->
     msg.send images_url + msg.random merge
